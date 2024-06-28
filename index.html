@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game App</title>
+    <!-- link for font awsome library for icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- linkn for css bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link for the main css file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- ********* start home section ********* -->
+    <section id="home">
+        <!-- ******* start home section ******* -->
+        <header id="header">
+            <img src="images/wraper.png" class="w-100 wraper-img" alt="">
+        </header>
+        <nav class="navbar navbar-expand-lg w-75 mx-auto rounded-4 position-sticky top-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/logo-sm.png" alt=""> GAME REVIEWS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="mmorpg" aria-current="page" href="#">MMORPG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="shooter" href="#">SHOOTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="sailing" aria-current="page" href="#">SAILING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="permadeath" href="#">PERMADEATH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="superhero" aria-current="page" href="#">SUPERHERO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pixel" href="#">PIXEL</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ******* start games section ******* -->
+        <main>
+            <div class="container">
+                <div class="wrapper p-3">
+                    <div class="row" id="games"></div>
+                </div>
+            </div>
+
+        </main>
+    </section>
+    <!-- ********* start details section ********* -->
+    <section id="details" class="d-none py-5 text-white">
+            <div class="container">
+                    <div class="container">
+                        <h1>Details Game</h1>
+                        <div class="row p-3" id="gameDetails"></div>
+                    </div>
+            </div>
+    </section>
+    <!-- loader -->
+    <div class="loader">
+        <span  style="--i:1">L</span>
+        <span  style="--i:2">O</span>
+        <span style="--i:3">A</span>
+        <span  style="--i:4">D</span>
+        <span  style="--i:5">I</span>
+        <span  style="--i:6">N</span>
+        <span  style="--i:7">G</span>
+        <span style="--i:8">.</span>
+        <span style="--i:9" >.</span>
+        <span style="--i:10" >.</span>
+    </div>
+    <!-- link for js bootstrap file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- link for main js file -->
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>
