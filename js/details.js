@@ -9,12 +9,12 @@ export class gameDetails{
                 'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
             }
         };
-        document.queryselector(".loader").style.display = "block";
+        document.querySelector(".loader").style.display = "block";
         setTimeOut( ()=>{
             const request = await fetch(url, options);
             const detailsResponse = await request.json();
             this.displayDetails(detailsResponse);
-            document.queryselector(".loader").style.display = "none";
+            document.querySelector(".loader").style.display = "none";
             
         } , 500)
         this.closeDetails();
