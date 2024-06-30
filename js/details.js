@@ -10,11 +10,14 @@ export class gameDetails{
             }
         };
         document.queryselector(".loader").style.display = "block";
-        const request = await fetch(url, options);
-        const detailsResponse = await request.json();
-        this.displayDetails(detailsResponse);
+        setTimeOut( ()=>{
+            const request = await fetch(url, options);
+            const detailsResponse = await request.json();
+            this.displayDetails(detailsResponse);
+            document.queryselector(".loader").style.display = "none";
+            
+        } , 500)
         this.closeDetails();
-        document.queryselector(".loader").style.display = "none";
     }
     // function to get game id
     getId(){
