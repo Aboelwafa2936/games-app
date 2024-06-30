@@ -9,10 +9,12 @@ export class gameDetails{
                 'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
             }
         };
+        document.queryselector(".loader").style.display = "block";
         const request = await fetch(url, options);
         const detailsResponse = await request.json();
         this.displayDetails(detailsResponse);
         this.closeDetails();
+        document.queryselector(".loader").style.display = "none";
     }
     // function to get game id
     getId(){
