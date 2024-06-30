@@ -1,24 +1,32 @@
 export class gameDetails{
     // function to get game details
-    async getDetails(dataIdValue){
-        const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${dataIdValue}`;
-        const options = {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-key': 'e0667085d0msh8a11cb9241c8490p12c6b1jsnbcae5b2369c8',
-                'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
-            }
-        };
-        document.querySelector(".loader").style.display = "block";
-        setTimeOut( ()=>{
-            const request = await fetch(url, options);
-            const detailsResponse = await request.json();
-            this.displayDetails(detailsResponse);
-            document.querySelector(".loader").style.display = "none";
-            
-        } , 500)
+    async getDetails(dataIdValue) {
+    const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${dataIdValue}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': 'e0667085d0msh8a11cb9241c8490p12c6b1jsnbcae5b2369c8',
+            'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+    };
+
+    document.querySelector(".loader").style.display = "block";
+
+    try {
+        await new Promise((resolve) => {
+            setTimeout(resolve, 500);
+        });
+
+        const request = await fetch(url, options);
+        const detailsResponse = await request.json();
+        this.displayDetails(detailsResponse);
+    } catch (error) {
+        console.error('Error fetching details:', error);
+    } finally {
+        document.querySelector(".loader").style.display = "none";
         this.closeDetails();
     }
+}
     // function to get game id
     getId(){
         const cards = document.querySelectorAll('.card');
