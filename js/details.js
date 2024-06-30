@@ -64,7 +64,7 @@ export class gameDetails{
         document.querySelector('.loader').style.display = 'none';
     }
     // function to close details section
-    closeDetails(){
+    async closeDetails(){
         const closeIcon = document.querySelector('.fa-close');
         closeIcon.addEventListener('click', ()=>{
             const details = document.getElementById('details');
