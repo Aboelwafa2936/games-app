@@ -69,9 +69,18 @@ export class gameDetails{
         closeIcon.addEventListener('click', ()=>{
             const details = document.getElementById('details');
             const home = document.getElementById('home');
-                details.classList.add('d-none');
-                home.classList.remove('d-none')
-                document.querySelector('.loader').style.display = 'none';
+            // Show loader temporarily
+            document.querySelector('.loader').style.display = 'block';
+    
+            // Wait for a short delay to simulate closing process
+            await new Promise((resolve) => setTimeout(resolve, 500));
+    
+            // Hide loader after delay (simulated)
+            document.querySelector('.loader').style.display = 'none';
+    
+            // Close details and display home
+            details.classList.add('d-none');
+            home.classList.remove('d-none');
         })
     }
 }
